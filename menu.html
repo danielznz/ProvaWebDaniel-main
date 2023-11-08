@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/token.js"></script>
+    <title>Formulário de Usuário</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #3f3f3f;
+    }
+
+    div {
+        position: absolute;
+        color: white;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 100px;
+        border-radius: 12px;
+    }
+
+    .card {
+        text-align: center;
+        padding: 70px;
+        background-color: #121212c4;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .card a {
+        display: block;
+        margin: 10px 0;
+        padding: 10px;
+        text-decoration: none;
+        background-color: rgb(0, 128, 255);
+        color: white;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        text-align: center; 
+        width: 100%; 
+    }
+
+    .card a:hover {
+        background-color: #0056b3;
+    }
+
+    a.usuario {
+        background-color: #258ac2;
+    }
+
+    a.produto {
+        background-color: #ae403f;
+    }
+
+    a.usuario:hover {
+        background-color: #5fbcee;
+    }
+
+    a.produto:hover {
+        background-color: #df6e6c;
+    }
+    a.vincular {
+        background-color: #5da478;
+    }
+    a.vincular:hover {
+        background-color: #8ad8a8;
+    }
+</style>
+
+<body>
+    <div class="card">
+        <h1>Escolha a Opção</h1>
+        <hr>
+        <br>
+        <h2>Usuário</h2>
+        <a href="criaruser.html" class="usuario">Cadastrar Usuário</a>
+        <br>
+        <a href="todosuser.html" class="usuario">Listar todos</a>
+        <br>
+        <a href="buscauser.html" class="usuario">Buscar</a>
+        <br>
+        <h2>Produto</h2>
+        <a href="criarprod.html" class="produto">Cadastrar Produto</a>
+        <br>
+        <a href="todosprod.html" class="produto">Listar todos</a>
+        <br>
+        <a href="buscaprod.html" class="produto">Buscar</a>
+        <br>
+        <h2>Usuário e Produto</h2>
+        <a href="user_e_prod.html" class="vincular">Vincular</a>
+        <br>
+    </div>
+    <script>
+        window.onload = function() {
+            fetch('/backend/token')
+                .then(response => response.json())
+                .then(data => localStorage.setItem('token', data.token));
+        }
+        
+    </script>
+</body>
+</html>

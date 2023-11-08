@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Gerenciamento de Usuários</title>
+</head>
+
+<style>
+    body{
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    min-height: 100vh;
+    background: url(img/1.jfif) no-repeat; 
+    background-size: cover;
+    background-position: center;
+    }
+
+
+    body::-webkit-scrollbar {
+  width: 10px;              
+}
+
+body::-webkit-scrollbar-track {
+  background: #001c2b;;       
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #69cbff;   
+  border-radius: 50px;      
+}
+    div.card{
+      position: absolute;
+      background-color: rgba(0, 14, 46, 0.973);
+      color: white;
+      border: 2px solid rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.801);
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 50px 40px;
+      border-radius: 10px;
+    }
+
+    input {
+    padding: 10px; 
+    border-radius: 5px; 
+    border: none; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+    button {
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    background-color: #258ac2;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    transition: background-color 0.3s ease;
+    }
+
+    button.excluir{
+    background-color: rgb(196, 0, 0);
+    
+    }
+
+    button:hover {
+    background-color: #4aa4ff; 
+    }
+
+    button.excluir:hover {
+    background-color: #d76060; 
+    }
+
+    a.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #2f3439;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    }
+
+    a.btn:hover {
+    background-color: #838b94;
+    }
+
+</style>
+
+<body>
+    <a href="../" class="btn">Voltar</a>
+    <div class="card">
+    <h1>Buscar Usuário</h1>
+    <hr>
+    <br>
+    <label for="getUserId">ID do Usuário:</label>
+    <input type="number" id="getUserId" placeholder="Digite o ID do usuário">
+    <br><br>
+    <button onclick="getUser()">Buscar</button>
+
+    <br>
+
+    <h1>Gerenciar Usuário</h1>
+    <hr>
+    <br>
+    <label for="inpuNome">Nome:</label>
+    <input type="text" id="inpuNome" placeholder="Digite o nome do usuário">
+    <br><br>
+    <label for="email">Email:</label>
+    <input type="text" id="inputEmail" placeholder="Digite o email do usuário">
+    <br><br>
+    <button onclick="updateUser()">Atualizar</button>
+    <button onclick="deleteUser()" class="excluir">Excluir</button>
+</div>
+
+<script src="js/getUser.js"></script>
+<script src="js/updateUser.js"></script>
+<script src="js/deleteUser.js"></script>
+</body>
+</html>

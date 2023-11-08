@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro de produtos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<style>
+    body{
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    min-height: 100vh;
+    background: url(img/4.jpg) no-repeat; 
+    background-size: cover;
+    background-position: center;
+    }
+
+    div{
+        position: absolute;
+      background-color: rgba(24, 0, 0, 0.89);
+      color: white;
+      border: 2px solid rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.801);
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 50px 40px;
+      border-radius: 10px;
+    }
+
+    input {
+    padding: 10px; 
+    border-radius: 5px;
+    border: none; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+    button {
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    background-color: rgb(229, 96, 0);
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+    background-color: rgb(255, 143, 63);
+    }
+
+    a.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #2f3439;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    }
+
+    a.btn:hover {
+    background-color: #838b94;
+    }
+
+</style>
+<body>
+    <a href="../" class="btn">Voltar</a>
+    <div class="card">
+    <form id="prodForm">
+        <h1>Cadastrar Produto</h1>
+        <hr>
+        <br>
+        <label for="Nome">Nome:</label>
+        <input type="text" id="nomeprod" name="nomeprod" placeholder="Digite o nome do produto" required>
+        <br><br>
+        <label for="Preço">Preço:</label>
+        <input type="text" id="precoprod" name="precoprod" placeholder="Digite o preço do produto"required>
+        <br><br>
+        <label for="Quantidade">Quantidade:</label>
+        <input type="text" id="quantidadeprod" name="quantidadeprod" placeholder="Digite a quantidade" required>
+        <br><br><br>
+        <button type="button" id="submitButtonProduto">Cadastrar Produto</button>
+    </form>
+    </div>
+<script src="js/createProd.js"></script>  
+</body>
+</html>
