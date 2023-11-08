@@ -31,8 +31,8 @@ class Model {
             $dsn = "pgsql:host=" . $this->host . ";dbname=" . $this->db_name;
             break;
         case "sqlite":
-            $dsn = "sqlite:" . "sqlite/test_drive.db";
-            $filepath =  "sqlite/test_drive.db";
+            $dsn = "sqlite:" . "C:/Users/Alunos/Downloads/ProvaWebDaniel-main-main/backend/sqlite/test_drive.db";
+            $filepath =  "C:/Users/Alunos/Downloads/ProvaWebDaniel-main-main/backend/sqlite/test_drive.db";
             if (!file_exists($filepath)) {
                 die("Arquivo não encontrado: $filepath");
             }

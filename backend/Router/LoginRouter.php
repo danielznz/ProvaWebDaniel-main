@@ -24,7 +24,7 @@ switch($_SERVER["REQUEST_METHOD"]){
             $email = $body ['email'];
             
             $senha=$body['senha'];
-            // $lembrar=$body['lembrar'];
+            $lembrar=false;
             $usuariosController = new UserController();
             $resultado = $usuariosController->login($senha,$lembrar, $email);
 

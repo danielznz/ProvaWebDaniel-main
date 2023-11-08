@@ -9,9 +9,11 @@
     },
     "authors": [
         {
-            "name": "faustinopsy",
-            "email": "rodrigohipnose@gmail.com"
+            "name": "danielznz",
+            "email": "daniel.teixeira.corporativo@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "firebase/php-jwt":"^6.8"
+    }
 }
